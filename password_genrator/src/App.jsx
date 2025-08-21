@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState,useRef, use } from 'react'
 import { toast, Toaster } from 'react-hot-toast' 
 
 
@@ -25,12 +25,13 @@ const App = () => {
   const copyPassword = () => {
     if (password) {
       navigator.clipboard.writeText(password)
+      passwordRef.current.select()
       toast.success('Password copied to clipboard!')
     } else {
       toast.error('No password to copy.')
     }
   }
-
+const passwordRef = useRef(null);
   useEffect(() => {
     generatePassword()
   }, [length, numberAllowed, charallowed, generatePassword])
@@ -46,6 +47,7 @@ const App = () => {
           className='outline-none w-full px-3 py-2 bg-white text-black'
           placeholder='Password'
           readOnly
+          ref={passwordRef}
         />
         <button
           onClick={copyPassword}
