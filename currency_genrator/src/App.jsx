@@ -32,7 +32,7 @@ function App() {
         backgroundImage: `url(https://tse2.mm.bing.net/th/id/OIP.BGqCLYaJpuWp-vG1gWTcVwHaCq?pid=Api&P=0&h=180)`
       }}
     >
-      {/* Overlay (for better readability) */}
+    
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="w-full relative z-10">
@@ -43,7 +43,7 @@ function App() {
               convert();
             }}
           >
-            {/* From Amount */}
+          
             <div>
               <InputBox
                 label="Amount"
@@ -55,7 +55,7 @@ function App() {
               />
             </div>
 
-            {/* Swap Button */}
+            
             <div className="relative w-full h-0.5">
               <button
                 type="button"
@@ -66,7 +66,7 @@ function App() {
               </button>
             </div>
 
-            {/* To Amount */}
+            
             <div>
               <InputBox
                 label="To"
@@ -78,7 +78,7 @@ function App() {
               />
             </div>
 
-            {/* Convert Button */}
+            
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded-md mt-4 font-semibold shadow hover:bg-blue-700 transition"
