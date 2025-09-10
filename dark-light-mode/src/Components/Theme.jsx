@@ -1,5 +1,7 @@
 import React from 'react'
-import useTheme from '../contexts/theme';
+import useTheme from './contexts/theme';
+
+
 
 function Theme() {
 
